@@ -2,8 +2,8 @@
 const priceSmall = 15;
 const priceMedium = 20;
 const priceLarge = 25;
-function displayValues() {
-
+function displayValues() 
+{
     let output = "";
 
     switch(Size_rg.value) {
@@ -18,65 +18,56 @@ function displayValues() {
         break;
         console.log('subtotal is $(subtotal)');
     }
-    subtotal = Size_rg.subtotal;
-    pstToPay = Size_rg.subtotal * 0,07;
-    gstToPay - Size_rg.subtotal * 0,08;
-    total = subtotal + pstToPay + gstToPay
-  }
-  if (Size_rg.subtotal = priceSmall) 
-  {
-
-          subtotal = 10;
-  }
+      subtotal = Size_rg.subtotal;
+      pstToPay = Size_rg.subtotal * 0.07;
+      gstToPay - Size_rg.subtotal * 0.08;
+      total = subtotal + pstToPay + gstToPay
+  
+if (Size_rg.subtotal = priceSmall) 
+{
+      subtotal = 10;
+}
    
-  else if (subtotal = priceMedium)
-  { 
-          subtotal = 12;
-  }
-  else
-  {
-          subtotal - 15;
-
-  }
-
-  function resetForm() {
-  
-  document.getElementById("myForm").reset();
-  }
-  
-
-document.getElementById("total").value = Math.round (total);
-document.getElementById("subtotal").value = 
-subtotal;
-document.getElementById("gstToPay").value = Math.round(gst);
-document.getElementById("pstToPay").value = Math.round(pst);
-output += `<p>You ordered pizzae for ${amountPeople} ${amountPeople > 1 ? 'people' : 'person'}</p>`;
-document.getElementById("output").innerHTML = output;
-console.log(output);
+else if (subtotal = priceMedium)
+{ 
+      subtotal = 12;
+}
+else
+{
+      subtotal - 15;
+}
+}
+      document.getElementById("total").value = Math.round (total);
+      document.getElementById("subtotal").value = 
+      subtotal;
+      document.getElementById("gstToPay").value = Math.round(gst);
+      document.getElementById("pstToPay").value = Math.round(pst);
+      output += `<p>You ordered pizzae for ${amountPeople} ${amountPeople > 1 ? 'people' : 'person'}</p>`;
+      document.getElementById("output").innerHTML = output;
+      console.log(output);
 
   function removeSelectDefaults()
   {
-    var emptyBoxes = document.getElementsByTagName("select");
-    for (var i = 0; i < emptyBoxes.length; i++)
-    {
-        emptyBoxes[i].selectedIndex = -1;
-    }
-   
-}
+      var emptyBoxes = document.getElementsByTagName("select");
+      for (var i = 0; i < emptyBoxes.length; i++)
+      {
+          emptyBoxes[i].selectedIndex = -1;
+      }
+  }
 
-function createEventListeners()
-{
-    //get click from add passenger button to a variable
-    var submitButton = document.getElementById("reservationButton");
-    if (submitButton.addEventListener) 
-    {
-        submitButton.addEventListener("click", registerDetails, false);
-    }
-    else if (submitButton.attachEvent)
-    {
-        submitButton.attachEvent("onclick", registerDetails);
-    }
-};
+  function createEventListeners()
+  {
+      //get click from add passenger button to a variable
+      var submitButton = document.getElementById("reservationButton");
+      if (submitButton.addEventListener) 
+      {
+          submitButton.addEventListener("click", registerDetails, false);
+      }
+      else if (submitButton.attachEvent)
+      {
+          submitButton.attachEvent("onclick", registerDetails);
+      }
+}
 
 if (window.addEventListener)
 {
@@ -155,7 +146,6 @@ function validate()
         document.formData.id_crust2.focus();
         return false;
     }
-
     else (document.formData.id_crust3.value == "")
     {
         alert("Please input your crust choice!!");
@@ -169,7 +159,4 @@ function validate()
         document.formData.id_paymentmethod.focus();
         return false;
     }
-    
-
-}
 }
