@@ -26,7 +26,7 @@ function displayValues()
       
 if (Size_rg.subtotal = priceSmall) 
 {
-      subtotal = 10;
+    subtotal = 10;
 }
    
 else if (subtotal = priceMedium)
@@ -38,6 +38,8 @@ else
       subtotal - 15;
 }
 }
+function outputValues()
+{
       document.getElementById("total").value = Math.round (total);
       document.getElementById("subtotal").value = subtotal;
       document.getElementById("gstToPay").value = Math.round(gst);
@@ -45,6 +47,7 @@ else
       output += `<p>You ordered pizzae for ${amountPeople} ${amountPeople > 1 ? 'people' : 'person'}</p>`;
       document.getElementById("output").innerHTML = output;
       console.log(output);
+}
 
 function removeSelectDefaults()
 {
@@ -160,5 +163,3 @@ function validate()
         return false;
     }
 }
-
-
