@@ -6,7 +6,8 @@ function displayValues()
 {
     let output = "";
 
-    switch(Size_rg.value) {
+    switch(Size_rg.value) 
+    {
       case "10":
         subtotal = priceSmall;
         break;
@@ -21,8 +22,8 @@ function displayValues()
       subtotal = Size_rg.subtotal;
       pstToPay = Size_rg.subtotal * 0.07;
       gstToPay - Size_rg.subtotal * 0.08;
-      total = subtotal + pstToPay + gstToPay
-  
+      total = subtotal + pstToPay + gstToPay;
+      
 if (Size_rg.subtotal = priceSmall) 
 {
       subtotal = 10;
@@ -160,3 +161,6 @@ function validate()
         return false;
     }
 }
+
+
+
