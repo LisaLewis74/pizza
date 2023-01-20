@@ -39,35 +39,34 @@ else
 }
 }
       document.getElementById("total").value = Math.round (total);
-      document.getElementById("subtotal").value = 
-      subtotal;
+      document.getElementById("subtotal").value = subtotal;
       document.getElementById("gstToPay").value = Math.round(gst);
       document.getElementById("pstToPay").value = Math.round(pst);
       output += `<p>You ordered pizzae for ${amountPeople} ${amountPeople > 1 ? 'people' : 'person'}</p>`;
       document.getElementById("output").innerHTML = output;
       console.log(output);
 
-  function removeSelectDefaults()
-  {
+function removeSelectDefaults()
+{
       var emptyBoxes = document.getElementsByTagName("select");
       for (var i = 0; i < emptyBoxes.length; i++)
       {
           emptyBoxes[i].selectedIndex = -1;
       }
-  }
+}
 
-  function createEventListeners()
-  {
-      //get click from add passenger button to a variable
-      var submitButton = document.getElementById("reservationButton");
-      if (submitButton.addEventListener) 
-      {
-          submitButton.addEventListener("click", registerDetails, false);
-      }
-      else if (submitButton.attachEvent)
-      {
-          submitButton.attachEvent("onclick", registerDetails);
-      }
+function createEventListeners()
+{
+  //get click from add passenger button to a variable
+  var submitButton = document.getElementById("reservationButton");
+if (submitButton.addEventListener) 
+{
+      submitButton.addEventListener("click", registerDetails, false);
+}
+else if (submitButton.attachEvent)
+{
+      submitButton.attachEvent("onclick", registerDetails);
+}
 }
 
 if (window.addEventListener)
@@ -161,6 +160,5 @@ function validate()
         return false;
     }
 }
-
 
 
