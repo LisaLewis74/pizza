@@ -2,6 +2,7 @@
 const priceSmall = 15;
 const priceMedium = 20;
 const priceLarge = 25;
+
 function displayValues() 
 {
     let output = "";
@@ -38,6 +39,7 @@ else
       subtotal - 15;
 }
 }
+
 function outputValues()
 {
       document.getElementById("total").value = Math.round (total);
@@ -61,7 +63,7 @@ function removeSelectDefaults()
 function createEventListeners()
 {
   //get click from add passenger button to a variable
-  var submitButton = document.getElementById("reservationButton");
+var submitButton = document.getElementById("reservationButton");
 if (submitButton.addEventListener) 
 {
       submitButton.addEventListener("click", registerDetails, false);
@@ -108,58 +110,60 @@ function validate()
         return false;
     }
 
-    if (document.formData.id_name.value == "")
-    {
+if (document.formData.id_name.value == "")
+{
         alert("Please input your phone numberame!");
         document.formData.id_phone.focus();
         return false;
-    }
+}
 
-    if (document.formData.id_name.value == "")
-    {
+if (document.formData.id_name.value == "")
+{
         alert("Please input size of pizza you'd like!!");
         document.formData.smallsize.focus() || document.shuttleReservationForm.mediumsize.focus() || document.shuttleReservationForm.largesize.focus();
         return false;
-    }
+}
 
-    if (document.formData.id_name.value == "")
-    {
+if (document.formData.id_name.value == "")
+{
         alert("Please input your phone numberame!");
         document.formData.id_delivery.focus();
         return false;
-    } 
+} 
 
-    if (document.formData.id_crust1.value == "" )
-    {
+if (document.formData.id_crust1.value == "" )
+{
         alert("Please input your crust choice!!");
         document.formData.id_crust1.focus();
         return false;
-    }
+}
     
-    else if (document.formData.id_crust1.value == "")
-    {
+else if (document.formData.id_crust1.value == "")
+{
         alert("Please input your phone numberame!");
         document.formData.id_crust1.focus();
         return false;
-    }
+}
 
-    else if (document.formData.id_crust2.value == "")
-    {
+else if (document.formData.id_crust2.value == "")
+{
         alert("Please input your phone numberame!");
         document.formData.id_crust2.focus();
         return false;
-    }
-    else (document.formData.id_crust3.value == "")
-    {
+}
+else (document.formData.id_crust3.value == "")
+{
         alert("Please input your crust choice!!");
         document.formData.id_crust3.focus();
         return false;
-    }
+}
 
-    if (document.formData.id_paymentmethod.value == "" )
-    {
+if (document.formData.id_paymentmethod.value == "" )
+{
         alert("Please input your crust choice!!");
         document.formData.id_paymentmethod.focus();
         return false;
-    }
 }
+}
+
+
