@@ -22,17 +22,6 @@ function displayValues() {
     pstToPay = Size_rg.subtotal * 0.07;
     gstToPay - Size_rg.subtotal * 0.08;
     total = subtotal + pstToPay + gstToPay;
-
-    if (Size_rg.subtotal = priceSmall) {
-        subtotal = 10;
-    }
-
-    else if (subtotal = priceMedium) {
-        subtotal = 12;
-    }
-    else {
-        subtotal - 15;
-    }
 }
 
 function outputValues() {
