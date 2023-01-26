@@ -49,11 +49,12 @@
       <input id="id_phone" type="text" name="id_phone" size="14" required>
       <br>
       <br>
-      <input type="radio" id="smallsize" name="size_rg" value="10" onclick="displayValues(subtotal);">
+
+      <input type="radio" id="smallsize" name="pizza_size" value="10" onclick="displayValues(subtotal);">
       <label for="smallsize">Small 10"</label><br>
-      <input type="radio" id="mediumsize" name="size_med" value="12" onclick="displayValues(subtotal);">
+      <input type="radio" id="mediumsize" name="pizza_size" value="12" onclick="displayValues(subtotal);">
       <label for="mediumsize">Medium 12"</label><br>
-      <input type="radio" id="largesize" name="size_large" value="15" onclick="displayValues(subtotal);">
+      <input type="radio" id="largesize" name="pizza_size" value="15" onclick="displayValues(subtotal);">
       <label for="largesize">Large 15" required</label>
 
       </select>
@@ -96,7 +97,7 @@
 
         </label>
         <label>
-          <input id=id_crust3 name="id_crust3" type="radio" value="Deep Dish">
+          <input id="id_crust3" name="id_crust3" type="radio" value="Deep Dish">
 
           Deep Dish
 
@@ -172,10 +173,10 @@
         <input type="text" id="subtotal" name="subtotal">
 
         <label for="pstToPay">PST $:</label>
-        <input type="text" id="pstToPay name=" pstToPay"><br>
+        <input type="text" id="pstToPay" name="pst_To_Pay"><br>
 
         <label for="gstToPay">GST $:</label>
-        <input type="text" id="gstToPay" name="gstToPay"><br>
+        <input type="text" id="gstToPay" name="gst_To_Pay"><br>
 
         <label for="total">Total $:</label>
         <input type="text" id="total" name="total"><br>
