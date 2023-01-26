@@ -1,0 +1,75 @@
+body  {
+    background-color: blanchedalmond;
+}
+fieldset legend {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+    color: rgb(194, 15, 15);
+    display: block;
+    text-align: left;
+    margin-top: 1.25em;
+  }
+
+  input[type="text"],
+  select {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  fieldset legend {
+    padding-top: 1.25em;
+  }
+
+  fieldset label {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-weight: normal;
+    position: relative;
+    left: -0.5em;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5em;
+    padding-top: 0.125em;
+    padding-bottom: 0.125em;
+    border: 2px solid transparent;
+    width: 9em;
+  }
+
+  select {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.25em;
+    background-color: #FFFEFF;
+    font-size: 1em;
+  }
+
+  input[type="submit"] {
+    margin-top: 2em;
+  }
+    input[type=submit]:focus {
+    outline: 2px solid black;
+  }
+
+  input[type="text"]:hover,
+  fieldset label:hover {
+    background-color: #ADDFFF;
+  }
+
+  input[type="text"]:focus {
+    outline: 2px solid black;
+    background-color: #EEEEEE;
+  }
+
+  select:focus {
+    outline: 2px solid black;
+    background-color: #EEEEEE;
+  }
+
+  fieldset label.focus {
+    background-color: #bb8282;
+    border-color: black;
+  }
