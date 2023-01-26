@@ -1,236 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- create head section -->
-    <head>
-        <!--create title for website-->
-        <title> Lisa's Pizzeria</title>
-        <!--Add code to load website according to desktop, mobile or laptop acces from user-->
-        <meta name="viewport" content = "width=device-width, initial-scale=1">
-        <meta charset="utf-8">
-        <!--Link css stylesheet-->
-        <link rel = "stylesheet" href = "css/pizza.css" media = "screen">
-        <script src="scripts/pizza.js"></script>
-	    <!-- <script src = "modernizr.custom.05819.js"></script> -->
-    </head>
+<!-- create head section -->
 
-    <body>
-        <div id = "outerwrapper">
-            <header>
-                <div class = "desktop">
-                    <a href = "index.html">
-                        <img id = "header-image" class = "float-left" src = "images/logo.png" height = 250 width = 500 alt = "pizzeria logo">
-                    </a>
-                </div>
-            </header>
-            
-            <form id = "formData" onsubmit="return recalculateTotal()">
-            <h2>
-                Order Form
-              </h2>
-            
-              <label for="id_name">
-                Name
-              </label>
-             
-              <input id="id_name"
-                   type="text"
-                   name = id_name"
-                   size="30" required>
-                   <br>
-                   <br>
-              
-              <label for="id_address">
-                Address
-              </label>
-              <input id="id_address"
-                   type="text"
-                   name = id_address
-                   size="40" required>
-                   <br>
-                   <br>
-              <label for="id_phone">
-                Phone
-              </label>
-              <input id="id_phone"
-                   type="text"
-                   name="id_phone"
-                   size="14" required>
-                   <br>
-                   <br>
-                <input type="radio" id="smallsize" name="size_rg" value="10" onclick="displayValues(subtotal);">
-                    <label for="smallsize">Small 10"</label><br>
-                    <input type="radio" id="mediumsize" name="size_med" value="12" onclick="displayValues(subtotal);">  
-                    <label for="mediumsize">Medium 12"</label><br>
-                    <input type="radio" id="largesize" name="size_large" value="15" onclick="displayValues(subtotal);"> 
-                    <label for="largesize">Large 15" required</label>
-                
-              </select>
-                <br>
-                <br>
-              <label for="id_delivery">
-                Delivery Method
-              </label>
-              <select id="id_delivery" required>
-                <option>
-                ------
-                </option>
-                <option>
-                  Eat in store
-                </option>
-                <option>
-                  Pickup
-                </option>
-                <option>
-                  Home delivery
-                </option>
-              </select>
-                <br>
-                <br>
-              <fieldset>
+<head>
+  <!--create title for website-->
+  <title> Lisa's Pizzeria</title>
+  <!--Add code to load website according to desktop, mobile or laptop acces from user-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <!--Link css stylesheet-->
+  <link rel="stylesheet" href="css/pizza.css" media="screen">
+  <script src="scripts/pizza.js"></script>
+  <!-- <script src = "modernizr.custom.05819.js"></script> -->
+</head>
 
-                <legend>
-                    Crust
-                </legend>
-                <label>
-                  <input id="id_crust1"
-                       name="id_crust1"
-                       type="radio"
-                       value="Thin">
-                  
-                    Thin
-                      
-                </label>
-                <label>
-                  <input id="id_crust2"
-                       name="id_crust2"
-                       type="radio"
-                       value="Classic"
-                    >
-                
-                    Classic
-                 
-                </label>
-                <label>
-                  <input id=id_crust3
-                        name="id_crust3"
-                       type="radio"
-                       value="Deep Dish">
-                
-                        Deep Dish
-                    
-                </label>
-              </fieldset>
-              <fieldset>
-                <legend>
-                  Toppings 
-                </legend>
-                <label id = "toppings">
-                    <input id="id_pepperoni"
-                           name="Pepperoni"
-                         type="checkbox"
-                         value="Pepperoni">
-                    
-                          Pepperoni
-                        
-                  </label>
+<body>
+  <div id="outerwrapper">
+    <header>
+      <div class="desktop">
+        <a href="index.html">
+          <img id="header-image" class="float-left" src="images/logo.png" height=250 width=500 alt="pizzeria logo">
+        </a>
+      </div>
+    </header>
 
-                <label>
-                    <input id="id_sausage"
-                       name="id_sausage"
-                       type="checkbox"
-                       value="id_Sausage">
-                  
-                        Sausage
-                      
-                </label>
-                
-                <label>
-                  <input id="id_mushrooms"
-                        name="id_mushrooms"
-                       type="checkbox"
-                       value=id_mushrooms>
-                  
-                        Mushrooms
-                      
-                </label>
-                <label>
-                  <input id="id_onions"
-                        name="id_onions"
-                       type="checkbox"
-                       value="Onions">
-                  
-                        Onions
-                      
-                </label>
-                <label>
-                  <input id="id_greenpeppers"
-                        name="id_greenpeppers"
-                       type="checkbox"
-                       value="id_greenpeppers">
-                  
-                        Green Peppers
-                      
-                </label>
-                <label>
-                  <input id="id_blackolives"
-                       name="id_blackolives"
-                       type="checkbox"
-                       value="Black Olives">
-                  
-                        Back Olives
-                      
-                </label>
-                <label>
-                  <input id="id_extracheese"
-                        name="extracheese"
-                       type="checkbox"
-                       value="id_extracheese">
-                  
-                        Extra cheese
-                      
-                </label>
-                
-              </fieldset>
-              <fieldset>
-              <legend>
-                Payment Method
-            </legend>
-            <select id="paymentmethod" name="paymentmethod" required="required">
-                <option value="select">- Select One -</option>
-                <option value="cash">Cash</option>
-                <option value="debit">Debit</option>
-                <option value="credit">Credit Card</option>
-             </select>
-            </fieldset>
+    <form id="formData" onsubmit="return recalculateTotal()">
+      <h2>
+        Order Form
+      </h2>
 
-            <fieldset id="nameinfo" name="displayName">
-              <legend>
-                  <h2><b>Customer Information</b></h2>
-              </legend>
-              <label for="subtotal">SubTotal $:</label>
-              <input type="text" id="subtotal" name="subtotal">
+      <label for="id_name">
+        Name
+      </label>
 
-              <label for="pstToPay">PST $:</label>
-              <input type="text" id="pstToPay name="pstToPay"><br>
+      <input id="id_name" type="text" name=id_name" size="30" required>
+      <br>
+      <br>
 
-              <label for="gstToPay">GST $:</label>
-              <input type="text" id="gstToPay" name="gstToPay"><br>
+      <label for="id_address">
+        Address
+      </label>
+      <input id="id_address" type="text" name=id_address size="40" required>
+      <br>
+      <br>
+      <label for="id_phone">
+        Phone
+      </label>
+      <input id="id_phone" type="text" name="id_phone" size="14" required>
+      <br>
+      <br>
 
-              <label for="total">Total $:</label>
-              <input type="text" id="total" name="total"><br>
+      <input type="radio" id="smallsize" name="pizza_size" value="10" onclick="displayValues(subtotal);">
+      <label for="smallsize">Small 10"</label><br>
+      <input type="radio" id="mediumsize" name="pizza_size" value="12" onclick="displayValues(subtotal);">
+      <label for="mediumsize">Medium 12"</label><br>
+      <input type="radio" id="largesize" name="pizza_size" value="15" onclick="displayValues(subtotal);">
+      <label for="largesize">Large 15" required</label>
 
-          </fieldset>
-              <span id = "output"></span>
-                <br>
-                <br>
-                <input type="button" class="btn" onclick="displayValues()" value="Submit">;
+      </select>
+      <br>
+      <br>
+      <label for="id_delivery">
+        Delivery Method
+      </label>
+      <select id="id_delivery" required>
+        <option>
+          ------
+        </option>
+        <option>
+          Eat in store
+        </option>
+        <option>
+          Pickup
+        </option>
+        <option>
+          Home delivery
+        </option>
+      </select>
+      <br>
+      <br>
+      <fieldset>
 
-            <input type="reset" id="reset" value="Reset Form"
+        <legend>
+          Crust
+        </legend>
+        <label>
+          <input id="id_crust1" name="id_crust1" type="radio" value="Thin">
 
-                   class="btn">
-            </form>
-        </body>
-    </html>
-              
+          Thin
 
-              
+        </label>
+        <label>
+          <input id="id_crust2" name="id_crust2" type="radio" value="Classic">
+
+          Classic
+
+        </label>
+        <label>
+          <input id="id_crust3" name="id_crust3" type="radio" value="Deep Dish">
+
+          Deep Dish
+
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Toppings
+        </legend>
+        <label id="toppings">
+          <input id="id_pepperoni" name="Pepperoni" type="checkbox" value="Pepperoni">
+
+          Pepperoni
+
+        </label>
+
+        <label>
+          <input id="id_sausage" name="id_sausage" type="checkbox" value="id_Sausage">
+
+          Sausage
+
+        </label>
+
+        <label>
+          <input id="id_mushrooms" name="id_mushrooms" type="checkbox" value=id_mushrooms>
+
+          Mushrooms
+
+        </label>
+        <label>
+          <input id="id_onions" name="id_onions" type="checkbox" value="Onions">
+
+          Onions
+
+        </label>
+        <label>
+          <input id="id_greenpeppers" name="id_greenpeppers" type="checkbox" value="id_greenpeppers">
+
+          Green Peppers
+
+        </label>
+        <label>
+          <input id="id_blackolives" name="id_blackolives" type="checkbox" value="Black Olives">
+
+          Back Olives
+
+        </label>
+        <label>
+          <input id="id_extracheese" name="extracheese" type="checkbox" value="id_extracheese">
+
+          Extra cheese
+
+        </label>
+
+      </fieldset>
+      <fieldset>
+        <legend>
+          Payment Method
+        </legend>
+        <select id="paymentmethod" name="paymentmethod" required="required">
+          <option value="select">- Select One -</option>
+          <option value="cash">Cash</option>
+          <option value="debit">Debit</option>
+          <option value="credit">Credit Card</option>
+        </select>
+      </fieldset>
+
+      <fieldset id="nameinfo" name="displayName">
+        <legend>
+          <h2><b>Customer Information</b></h2>
+        </legend>
+        <label for="subtotal">SubTotal $:</label>
+        <input type="text" id="subtotal" name="subtotal">
+
+        <label for="pstToPay">PST $:</label>
+        <input type="text" id="pstToPay" name="pst_To_Pay"><br>
+
+        <label for="gstToPay">GST $:</label>
+        <input type="text" id="gstToPay" name="gst_To_Pay"><br>
+
+        <label for="total">Total $:</label>
+        <input type="text" id="total" name="total"><br>
+
+      </fieldset>
+      <span id="output"></span>
+      <br>
+      <br>
+      <input type="button" class="btn" onclick="displayValues()" value="Submit">;
+
+      <input type="reset" id="reset" value="Reset Form" class="btn">
+    </form>
+</body>
+
+</html>
