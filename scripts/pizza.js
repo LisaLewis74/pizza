@@ -2,10 +2,12 @@
 const priceSmall = 15;
 const priceMedium = 20;
 const priceLarge = 25;
+let subtotal = 0;
 
 function displayValues() {
     let output = "";
-
+    let pizza_size = document.querySelector('input[name="pizza_size"]:checked').value;
+    
     switch (pizza_size.value) {
         case "10":
             subtotal = priceSmall;
@@ -15,13 +17,15 @@ function displayValues() {
             break;
         case "15":
             subtotal = priceLarge;
-            break;
-            console.log("subtotal is $(subtotal)");
+            break;     
     }
+    console.log(`subtotal is ${subtotal}`);
 
-    pstToPay = subtotal * 0.07;
-    gstToPay - subtotal * 0.08;
-    total = subtotal + pstToPay + gstToPay;
+    let subtotal = document.getElementById("subtotal");
+    let pstToPay = subtotal * 0.07;
+    let gstToPay = subtotal * 0.08;
+    let total = subtotal + pstToPay + gstToPay;
+    
 
     document.getElementById("total").value = Math.round(total);
     document.getElementById("subtotal").value = subtotal;
@@ -35,7 +39,7 @@ function displayValues() {
     output += "PST: $" + pst + "<br>";
     output += "Total: $" + total + "<br>";
 }
-
+/*
 function removeSelectDefaults() {
     var emptyBoxes = document.getElementsByTagName("select");
     for (var i = 0; i < emptyBoxes.length; i++) {
@@ -59,7 +63,7 @@ if (window.addEventListener) {
     window.attachEvent("onload", createEventListeners);
 }
 
-/* remove default selected options */
+/* remove default selected options 
 if (window.addEventListener) {
     window.addEventListener("load", removeSelectDefaults, false);
 } else if (window.attachEvent) {
@@ -124,4 +128,4 @@ function validate() {
         document.formData.id_paymentmethod.focus();
         return false;
     }
-}
+}*/
