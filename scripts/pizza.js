@@ -25,15 +25,17 @@ function displayValues() {
     let gstToPay = subtotal * 0.08;
     let total = subtotal + pstToPay + gstToPay;
 
+    // these lines output to form elements
     document.getElementById("total").value = Math.round(total);
     document.getElementById("subtotal").value = subtotal;
-    document.getElementById("gstToPay").value = Math.round(gst);
-    document.getElementById("pstToPay").value = Math.round(pst);
+    document.getElementById("gstToPay").value = Math.round(gstToPay);
+    document.getElementById("pstToPay").value = Math.round(pstToPay);
 
-    output += "Subtotal: $" + subtotal + "<br>";
-    output += "GST: $" + gst + "<br>";
-    output += "PST: $" + pst + "<br>";
-    output += "Total: $" + total + "<br>";
+    // these lines output to the console and <span>
+    output += `Subtotal: ${subtotal}<br>`;
+    output += `GST: ${gstToPay}<br>`;
+    output += `PST: ${pstToPay}<br>`;
+    output += `Total: ${total}<br>`;
     console.log(output);
-    document.getElementById("output").innerHTML = output;
+    
 }
