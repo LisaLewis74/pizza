@@ -23,7 +23,7 @@ function displayValues() {
 
     let pstToPay = subtotal * 0.07;
     let gstToPay = subtotal * 0.08;
-    total = subtotal + pstToPay + gstToPay;
+    let total = subtotal + pstToPay + gstToPay;
 
     document.getElementById("total").value = Math.round(total);
     document.getElementById("subtotal").value = subtotal;
